@@ -1,0 +1,18 @@
+#pragma once
+#include <SFML/Graphics.hpp>
+#include "Paddle.h"
+
+class Game {
+private: 
+	sf::RenderWindow window;
+	std::unique_ptr<Paddle> paddle1;
+	std::unique_ptr<Paddle> paddle2;
+public:
+	Game();
+	~Game();
+	void mainLoop();
+	void input();
+	void update();
+	void draw();
+};
+
