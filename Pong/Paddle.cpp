@@ -12,9 +12,11 @@ Paddle::~Paddle() {
 }
 
 void Paddle::moveX() {
+	paddle.move(0,1);
 }
 
 void Paddle::moveY() {
+	paddle.move(0,-1)
 }
 
 sf::RectangleShape Paddle::paddleDraw() {

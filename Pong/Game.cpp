@@ -4,6 +4,7 @@ Game::Game() {
 	window.create(sf::VideoMode(1024,768), "Okno");
 	paddle1 = std::make_unique<Paddle>(10,344);
 	paddle2 = std::make_unique<Paddle>(1014,344);
+	ball = std::make_unique<Ball>();
 }
 
 Game::~Game() {
@@ -32,5 +33,6 @@ void Game::draw() {
 	window.clear();
 	window.draw(paddle1->paddleDraw());
 	window.draw(paddle2->paddleDraw());
+	window.draw(ball->drawBall());
 	window.display();
 }
