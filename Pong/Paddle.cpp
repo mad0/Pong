@@ -11,14 +11,20 @@ Paddle::Paddle(int _x, int _y) {
 Paddle::~Paddle() {
 }
 
-void Paddle::moveX() {
-	paddle.move(0,1);
+void Paddle::moveUP() {
+	if (paddle.getPosition().y>0)
+		paddle.move(0, -10);
 }
 
-void Paddle::moveY() {
-	paddle.move(0,-1)
+void Paddle::moveDOWN() {
+	if (paddle.getPosition().y<768-80)
+		paddle.move(0, 10);
 }
 
 sf::RectangleShape Paddle::paddleDraw() {
 	return paddle;
+}
+
+sf::FloatRect Paddle::paddPosition(){
+	return paddle.getGlobalBounds();
 }

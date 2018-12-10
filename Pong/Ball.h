@@ -8,5 +8,6 @@ public:
 	Ball();
 	~Ball();
 	sf::CircleShape drawBall();
+	void updateBall();
 };
 

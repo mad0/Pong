@@ -17,5 +17,6 @@ public:
 	void input();
 	void update();
 	void draw();
+	void FPS();
 };
 

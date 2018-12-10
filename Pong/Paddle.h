@@ -8,8 +8,9 @@ private:
 public:
 	Paddle(int _x, int _y);
 	~Paddle();
-	void moveX();
-	void moveY();
+	void moveUP();
+	void moveDOWN();
 	sf::RectangleShape paddleDraw();
+	sf::FloatRect paddPosition();
 };
 
