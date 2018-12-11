@@ -41,7 +41,6 @@ void Game::input() {
 }
 
 void Game::update() {
-	ball->updateBall();
 }
 
 void Game::draw() {

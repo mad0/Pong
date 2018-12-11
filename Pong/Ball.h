@@ -8,6 +8,8 @@ public:
 	Ball();
 	~Ball();
 	sf::CircleShape drawBall();
+	sf::Vector2f ballPosition();
+	sf::RectangleShape 
 	void updateBall();
 };
 
