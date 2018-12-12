@@ -11,6 +11,6 @@ public:
 	void moveUP();
 	void moveDOWN();
 	sf::RectangleShape paddleDraw();
-	sf::FloatRect paddPosition();
+	sf::FloatRect getPosition();
 };
 

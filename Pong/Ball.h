@@ -4,12 +4,16 @@
 class Ball {
 private:
 	sf::CircleShape ball;
+	sf::Vector2f position;
+	float dirX;
+	float dirY;
 public:
-	Ball();
+	Ball(float x, float y);
 	~Ball();
 	sf::CircleShape drawBall();
-	sf::Vector2f ballPosition();
-	sf::RectangleShape 
+	sf::FloatRect getPosition();
 	void updateBall();
+	void leftRight();
+	void upDown();
 };
 

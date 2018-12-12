@@ -7,7 +7,7 @@ Game::Game() {
 	window.setVerticalSyncEnabled(true);
 	paddle1 = std::make_unique<Paddle>(10, 344);
 	paddle2 = std::make_unique<Paddle>(1004, 344);
-	ball = std::make_unique<Ball>();
+	this->ball = std::make_unique<Ball>(800.0f,0.0f);
 }
 Game::~Game() {
 }
@@ -41,6 +41,12 @@ void Game::input() {
 }
 
 void Game::update() {
+	if (ball->getPosition().left + 5 > 1020 || ball->getPosition().left-5<0)
+		ball->leftRight();
+	if (ball->getPosition().top + 5 > 750 || ball->getPosition().top + 5 < 0)
+		ball->upDown();
+	std::cout << ball->getPosition().top << "\n";
+	ball->updateBall();
 }
 
 void Game::draw() {

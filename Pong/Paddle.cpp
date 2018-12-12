@@ -25,6 +25,6 @@ sf::RectangleShape Paddle::paddleDraw() {
 	return paddle;
 }
 
-sf::FloatRect Paddle::paddPosition(){
+sf::FloatRect Paddle::getPosition(){
 	return paddle.getGlobalBounds();
 }
